@@ -1,15 +1,17 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.9;
+pragma solidity ^0.8.9;
 
 // Author: Khashkhuu 'Xass1on' Gankhuyag
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/utils/TokenTimelock.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
 
-contract DogeChewToken is ERC20, Ownable {
+contract DogeChewToken is ERC20Burnable, Ownable {
     using SafeMath for uint256;
+    using Strings for string;
     TokenTimelock public teamTimelock1;
     TokenTimelock public teamTimelock2;
     TokenTimelock public teamTimelock3;
@@ -34,7 +36,8 @@ contract DogeChewToken is ERC20, Ownable {
     string constant _tokenSymbol = "DC";
 
     address constant _tokenToOfferAddress =
-        0x75a0Cc530AF5fF6D3d4611CaF6422Ebe25CedBf7;
+        0x1A6d9F5D07Bb2405437d5aef9b157501718cb75a;
+    // 0x75a0Cc530AF5fF6D3d4611CaF6422Ebe25CedBf7;
 
     address constant _tokenTeamReserveAddress1 =
         0xD6bE95f9898Cfe0e942F43e7417a76EBba08F1BA;
