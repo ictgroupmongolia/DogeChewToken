@@ -36,8 +36,7 @@ contract DogeChewToken is ERC20Burnable, Ownable {
     string constant _tokenSymbol = "DC";
 
     address constant _tokenToOfferAddress =
-        0x1A6d9F5D07Bb2405437d5aef9b157501718cb75a;
-    // 0x75a0Cc530AF5fF6D3d4611CaF6422Ebe25CedBf7;
+        0x75a0Cc530AF5fF6D3d4611CaF6422Ebe25CedBf7;
 
     address constant _tokenTeamReserveAddress1 =
         0xD6bE95f9898Cfe0e942F43e7417a76EBba08F1BA;
