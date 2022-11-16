@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.9;
+pragma solidity 0.8.17;
 
 // Author: Khashkhuu 'Xass1on' Gankhuyag
 
@@ -66,27 +66,27 @@ contract DogeChewToken is ERC20Burnable, Ownable {
         teamTimelock1 = new TokenTimelock(
             this,
             _tokenTeamReserveAddress1,
-            block.timestamp + 60 * 60 * 24 * 365 * 1
+            block.timestamp + (60 * 60 * 24 * 56)
         );
         teamTimelock2 = new TokenTimelock(
             this,
             _tokenTeamReserveAddress2,
-            block.timestamp + 60 * 60 * 24 * 365 * 2
+            block.timestamp + (60 * 60 * 24 * 365 * 1) + (60 * 60 * 24 * 56)
         );
         teamTimelock3 = new TokenTimelock(
             this,
             _tokenTeamReserveAddress3,
-            block.timestamp + 60 * 60 * 24 * 365 * 3
+            block.timestamp + (60 * 60 * 24 * 365 * 2) + (60 * 60 * 24 * 56)
         );
         teamTimelock4 = new TokenTimelock(
             this,
             _tokenTeamReserveAddress4,
-            block.timestamp + 60 * 60 * 24 * 365 * 4
+            block.timestamp + (60 * 60 * 24 * 365 * 3) + (60 * 60 * 24 * 56)
         );
         teamTimelock5 = new TokenTimelock(
             this,
             _tokenTeamReserveAddress5,
-            block.timestamp + 60 * 60 * 24 * 365 * 5
+            block.timestamp + (60 * 60 * 24 * 365 * 4) + (60 * 60 * 24 * 56)
         );
         _mint(address(teamTimelock1), _tokenTeamReserve1 * 10**18);
         _mint(address(teamTimelock2), _tokenTeamReserve2 * 10**18);
